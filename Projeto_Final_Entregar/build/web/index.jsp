@@ -1,10 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 15/12/2020, 12:09:57
-    Author     : AI-Dev1
-    Tempo de dev: 15 min
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
