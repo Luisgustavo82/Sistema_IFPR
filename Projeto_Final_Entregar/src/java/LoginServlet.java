@@ -1,11 +1,11 @@
+import dados.UserMap;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Base64;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modelos.Criptografia;
 import modelos.Usuario;
 
 public class LoginServlet extends HttpServlet {    
@@ -26,8 +26,8 @@ public class LoginServlet extends HttpServlet {
         String senha = request.getParameter("senha");
         
         boolean logado = false;
-        for(Usuario user: Usuario.dados) {
-            if(user.getEmail().equals(email) && user.getSenha().equals(senha)){
+        for(Usuario user: UserMap.usuarios.values()) {
+            if(user.getEmail().equals(email) && user.getSenha().equals(Criptografia.criptografarMD5(senha))){
                 HttpSession session = request.getSession();
                 session.setAttribute("userId", user.getId());
                 logado=true;

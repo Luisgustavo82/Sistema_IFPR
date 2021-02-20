@@ -16,6 +16,10 @@
         <servlet-name>APIServlet</servlet-name>
         <servlet-class>APIServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Criptografia</servlet-name>
+        <servlet-class>modelos.Criptografia</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioServlet</servlet-name>
         <url-pattern>/UsuarioServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>APIServlet</servlet-name>
         <url-pattern>/APIServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Criptografia</servlet-name>
+        <url-pattern>/Criptografia</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
